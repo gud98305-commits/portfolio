@@ -1,0 +1,33 @@
+# SY Global Connect v2
+
+## 프로젝트 개요
+해외영업 직무 포트폴리오 겸 실제 업무 보조 도구.
+해외영업 실무를 위한 올인원 무역 웹앱.
+Next.js 14 + TypeScript + Tailwind CSS.
+
+## 핵심 흐름 (4단계 Value Chain)
+1. 시장분석 (Market Intel) — HS Code 검색, UN Comtrade 통계
+2. 규제/SWOT (Barrier Guard) — 진입장벽 신호등, AI SWOT 분석
+3. 가격전략 (Pricing) — Amazon 경쟁사 가격 벤치마크
+4. 바이어실행 (Action) — 바이어 매칭, AI 이메일 생성
+
+## 코딩 규칙
+- TypeScript strict mode 사용
+- 컴포넌트는 함수형 + arrow function
+- API 호출은 /src/lib/ 에 분리하고 컴포넌트에서 직접 fetch 금지
+- 비즈니스 로직은 /src/services/ 에 분리
+- try-catch에서 에러를 삼키지 말 것 (console.error 최소, 사용자에게 피드백)
+- 하드코딩된 가짜 데이터 금지
+- 한국어 UI, 무역 전문 용어는 영문 병기
+
+## 폴더 구조
+- /src/app/ — 페이지 라우팅 (Next.js App Router)
+- /src/components/ — 재사용 가능한 UI 컴포넌트
+- /src/lib/ — API 클라이언트, 유틸리티 함수
+- /src/services/ — 비즈니스 로직 (UI 코드 없음)
+- /src/types/ — TypeScript 타입 정의
+
+## 스타일링
+- Tailwind CSS 유틸리티 클래스 사용
+- 컬러 토큰: accent=#051161, danger=#ef4444, warn=#f59e0b
+- 모바일 퍼스트 반응형 디자인
